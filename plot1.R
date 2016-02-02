@@ -16,7 +16,7 @@ getsets <- function(furl = '') {
 
 fileurl <- 'https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip'
 #debug Uncomment function call before submitting
-#getsets(fileurl)
+getsets(fileurl)
 #end debug
 
 #read data to a big data frame
@@ -34,7 +34,7 @@ force_tz(subdata, 'UTC')
 #subset data frame for selected dates
 smallset <- subset(dset, Date %in% subdata)
 
-#clean space, big data frame not necessary any more
+#clean working space, big data frame not necessary any more
 rm(dset)
 
 #initialize graphic device
