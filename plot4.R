@@ -48,8 +48,8 @@ old_par <- par('mfcol')
 par(mfcol = c(2, 2))
 
 #draw plot 1
-hist(smallset$Global_active_power, xlab = 'Global Active Power (kilowatts)', 
-     main = 'Global Active Power', col = 'red1')
+plot(dtime, smallset$Global_active_power, type = 'l', 
+     ylab = 'Global Active Power', xlab = '')
 #draw plot 2
 plot(datetime, smallset$Sub_metering_1, type = 'l', ylab = 'Energy sub metering', xlab = '')
 points(datetime, smallset$Sub_metering_2, type = 'l', col = 'red')
